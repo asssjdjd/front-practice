@@ -1,0 +1,158 @@
+const navbarItems = document.querySelectorAll("#navbar-items .navbar-item");
+const closeNavBtn = document.querySelector("#close-navbar span");
+const closeHeadBtn = document.querySelectorAll("#header-nav-icon li span")[1];
+const navBar = document.getElementById("nav-bar");
+const navBarItems = document.getElementById("navbar-items");
+// // 'border-bottom: 2px solid;'
+const navbarHeader = document.querySelectorAll("#header-nav .navbar-item");
+const hideNav = document.getElementById("hide-nav");
+const visibleNav = document.getElementById("visible-nav");
+const hideNavItems = document.querySelectorAll("#hide-nav .navbar-item-hide")
+
+window.addEventListener('DOMContentLoaded', () => {
+    const viewportWidthWithScroll = window.innerWidth;
+    if(viewportWidthWithScroll <= 1024) {
+        hideNav.setAttribute('style', 'display : none !important')
+    }
+    // groupNav.setAttribute('style','display: none;');
+})
+
+
+// thanh navbar xuất hiện khi khéo qua vị trí nhất định 
+// navBar.setAttribute('style','display : none;')
+window.addEventListener('scroll', () => {
+    const navBar = document.getElementById("nav-bar");
+    const headerHeight = document.querySelector('#header')?.offsetHeight || 150 ;
+    // console.log(headerHeight);
+    
+    const viewportWidthWithScroll = window.innerWidth;
+    if(window.scrollY > headerHeight) {
+        navBar.setAttribute('style','display: flex !important');
+        navBar.setAttribute('transition','opacity 0.4s ease,transform 0.4s ease,visibility 0.4s;');
+    
+        if(viewportWidthWithScroll > 1024) {
+            navBarItems.setAttribute('style','display: flex;');
+        }
+
+    }else {
+        navBar.setAttribute('style','display: none;');
+        if(closeNavBtn.outerText !== "close" && closeHeadBtn.outerText !== "close") {
+            visibleNav.setAttribute('style','display : none');
+        }
+        if(window.innerWidth > 1024) {
+            visibleNav.setAttribute('style','display : none !important');
+        }
+    
+    }
+});
+
+{/* <span class="material-symbols-outlined">close</span> */}
+
+// thay đổi icon khi ấn trên nav và header
+// console.log(closeHeadBtn.outerText,closeNavBtn.outerText);
+closeHeadBtn.addEventListener('click', () => {
+    if(closeHeadBtn.outerText === "menu") {
+        closeHeadBtn.textContent = "close";
+        // navBar.setAttribute('style', 'display : flex');
+        // navBarItems.setAttribute('style', 'display : flex')
+        visibleNav.setAttribute('style', 'display : flex');
+        // navBarItems.removeAttribute('style', 'display: none !important;');
+        if(closeNavBtn.outerText !== "close") {
+            closeNavBtn.textContent = "close";
+        }
+    }else {
+        closeHeadBtn.textContent = "menu";
+        // navBar.setAttribute('style','display : flex;');
+        // navBarItems.setAttribute('style', 'display : none !important');
+        visibleNav.setAttribute('style', 'display : none !important');
+        if(closeNavBtn.outerText !== "menu") {
+            closeNavBtn.textContent = "menu";
+        }
+    }
+})
+
+closeNavBtn.addEventListener('click', () => {
+    if(closeNavBtn.outerText === "menu") {
+        closeNavBtn.textContent = "close";
+        // navBarItems.setAttribute('style', 'display : flex');
+        visibleNav.setAttribute('style', 'display : flex')
+        // navBarItems.setAttribute('style', 'display : none !important')
+        if(closeHeadBtn.outerText !== "close") {
+            closeHeadBtn.textContent = "close";
+        }
+    }else {
+        closeNavBtn.textContent = "menu";
+        navBarItems.setAttribute('style', 'display : flex')
+        navBar.setAttribute('style','display : flex;');
+        visibleNav.setAttribute('style', 'display : none !important');
+        if(closeHeadBtn.outerText !== "menu") {
+            closeHeadBtn.textContent = "menu";
+        }
+    }
+})
+
+// logic chuyen thanh gach duoi
+// chuyển gạch cho navbar
+hideNavItems.forEach((item) => {
+    const link = item.querySelector('a');
+    const currentPath = window.location.pathname.slice(1);
+    const href = link.getAttribute('href');
+    const isHome = (currentPath === "/" || currentPath.endsWith("index.html" || 
+        link.baseURI.includes("index.html")
+    ));
+
+    const viewportWidthWithScroll = window.innerWidth;
+    console.log(viewportWidthWithScroll)
+    const isCurrentPage = (href !== "index.html")&& (currentPath.includes(href));
+    // console.log(viewportWidthWithScroll);
+    if(viewportWidthWithScroll > 1024) {
+         if(isHome) {
+            hideNavItems[0].setAttribute('style','border-bottom: 2px solid;');
+        }else if (isCurrentPage) {
+            item.setAttribute('style','border-bottom: 2px solid;');
+        }else{
+            item.removeAttribute('style');
+        }
+    }
+});
+
+// chuyển gạch cho header
+navbarHeader.forEach((item) => {
+    const link = item.querySelector('a');
+    const currentPath = window.location.pathname.slice(1);
+    const href = link.getAttribute('href');
+    const isHome = (currentPath === "/" || currentPath.endsWith("index.html" || 
+        link.baseURI.includes("index.html")
+    ));
+
+    const viewportWidthWithScroll = window.innerWidth;
+    console.log(viewportWidthWithScroll)
+    const isCurrentPage = (href !== "index.html")&& (currentPath.includes(href));
+    // console.log(viewportWidthWithScroll);
+    if(viewportWidthWithScroll > 1024) {
+         if(isHome) {
+            navbarHeader[0].setAttribute('style',('style', 'border-bottom: 2px solid;'));
+        }else if (isCurrentPage) {
+            item.setAttribute('style',('style', 'border-bottom: 2px solid;'));
+        }else{
+            item.removeAttribute('style');
+        }
+    }
+});
+
+// logic của ảnh chuyển động 
+const slider = document.getElementById('slider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+nextBtn.addEventListener('click', () => {
+    // Cuộn sang phải một khoảng bằng chiều rộng 1 item + gap
+    const itemWidth = document.querySelector('.slider-item').offsetWidth + 20;
+    slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+    // Cuộn sang trái
+    const itemWidth = document.querySelector('.slider-item').offsetWidth + 20;
+    slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+});
