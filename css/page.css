@@ -39,7 +39,7 @@
     }
 
 
-    .img-card img::after {
+    /* .img-card img::after {
         content: "";
         position: absolute;
         top: 0;
@@ -52,7 +52,7 @@
             rgba(0, 0, 0, 0.45) 100%
         );
         z-index: 1;
-    }
+    } */
 
     /* responsive */
 
