@@ -20,6 +20,7 @@
         <ul id = "icon-navbar"style="display: flex;">
             <li id = "search-navbar"><span class="material-symbols-outlined">search</span></li>
             <li id = "close-navbar"><span class="material-symbols-outlined">menu</span></li>
+            
         </ul>
         <ul id ="hide-nav" class = "layout-left navbar-item" >
             <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
@@ -52,11 +53,11 @@
             </ul>
             <ul id = "right-header">
                 <li>
-                    <span class="material-symbols-outlined">call</span>
+                    <span style = "font-size: 20px" class="material-symbols-outlined">call</span>
                     <span>(123)456-7890</span>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">mail</span>
+                    <span style = "font-size: 20px" class="material-symbols-outlined">mail</span>
                     <span>example@domain.com</span>
                 </li>
             </ul>
@@ -64,7 +65,7 @@
         <!-- bottom header -->
          <div id="bottom-header">
             <ul id = "left-header">
-                <img src="front-practice/images/logo.png" alt="" >
+                <img src="/front-practice/images/logo.png" alt="" >
             </ul>
             <ul id = "right-header">
                 <div id = "header-nav">
@@ -74,11 +75,18 @@
                     <li class = "navbar-item"><a href="gadget.html">Gadgets</a></li>
                     <li class = "navbar-item"><a href="contact-us.html">Contact Us</a></li>
                     <li class = "navbar-item"><a href="#">Download</a></li>
-                <!-- </div> -->
+                    <div style="display: flex; align-items: center; justify-self: center; gap:8px;">
+                        <li><img src="/front-practice/font-size/home.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/notify.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/mail.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/group_search.svg" alt=""></li>
+                    </div>
+                    
+                </div>
             </ul>
             <div id = "header-nav-icon">
                 <ul >
-                    <li><span  class="material-symbols-outlined">search</span></li>
+                    <li><span class="material-symbols-outlined">search</span></li>
                     <li><span class="material-symbols-outlined">menu</span></li>
                 </ul>
             </div>
@@ -90,28 +98,70 @@
 
       <!-- masthead-->
        <div id="slider-wrapper">
-            <button class = "nav-btn prev" id = "prevBtn"><span class="material-symbols-outlined">arrow_back</span></button>
+            <button class = "nav-btn prev" id = "prevBtn"><img src="/front-practice/font-size/arrow_back.svg" alt=""></button>
             <div class="slider-container" id="slider">
                 <div class="slider-item">
                     <img src="/front-practice/images/anh1.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">Is MacBook Pro best laptop yet?</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="slider-item">
                     <img src="/front-practice/images/anh4.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">Latest XBox games news</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="slider-item">
                     <img src="/front-practice/images/anh7.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">Microsoft introduced Windows Hololens</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="slider-item">
                     <img src="/front-practice/images/anh8.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">GoPro hero5 black review</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="slider-item">
                     <img src="/front-practice/images/anh9.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">Which Apple phone is the best?</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="slider-item">
                     <img src="/front-practice/images/anh7.jpg" alt="Laptop">
+                    <div class="text-overlay">
+                        <h3 class="slide-title">How to setup google home on Android and iOS device</h3>
+                        <div class="slide-meta">
+                            <span class="category">FEATURED, LAPTOP</span>
+                            <span class="separator"></span> <span class="date">August 1, 2018</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class = "nav-btn next" id = "nextBtn"><span class="material-symbols-outlined">arrow_forward</span></button>
+            <button class = "nav-btn next" id = "nextBtn"><img src="/front-practice/font-size/arrow_forward.svg" alt=""></button>
        </div>
 
      <!-- main -->
@@ -122,10 +172,13 @@
             <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh1.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">D</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
-                    <div style = "color: #1994d1; margin-top: 20px; margin-bottom: 20px;" >GADGETS ---- August 1, 2018</div>
+                    <div>GADGETS ---- August 1, 2018</div>
                 </div>
 
                 <div class="introduce-card" style="font-size: 18px;line-height: 1.8">
@@ -145,6 +198,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh2.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">B</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -168,6 +224,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh3.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">C</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -193,6 +252,9 @@
             <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh4.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">A</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -216,6 +278,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh5.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">T</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -239,6 +304,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh6.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">F</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -264,6 +332,9 @@
             <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh7.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">D</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -287,6 +358,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh8.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">T</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
@@ -310,6 +384,9 @@
              <div class="main-card">
                 <div class = "img-card">
                     <img src="/front-practice/images/anh9.jpg" alt="...." width="360px" height="180px">
+                    <div class="overlay">
+                        <span class="overlay-text">G</span>
+                    </div>
                 </div>
                 <div class = "infor-card">
                     <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>

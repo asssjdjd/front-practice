@@ -1,4 +1,30 @@
 /* base for all css*/
+
+:root {
+    /* khoảng cách */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-nor: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-header-top: 15px;
+    --space-header-bottom: 20px;
+    --space-card-main: 10px;
+
+    /* màu sắc */
+    --bg--top-header--color: #000;
+    /* --text-header-hover :   #0693e3; */
+    --text-header-hover: #18588f;
+
+    /* front-size */
+    --base-fontsize : 16px;
+    --top-header--frontsize : 14px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
