@@ -66,6 +66,10 @@
         text-decoration: none; 
     }
 
+    .read {
+        color: #000;
+    }
+
     .read-more .read::before {
         content: "";
         position: absolute;

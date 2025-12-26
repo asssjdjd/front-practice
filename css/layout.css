@@ -278,6 +278,11 @@
             color: var(--text-header-hover) !important;
         }
     }
+
+    img {
+        width: 15px;
+        font-size: 14px;
+    }
 }
 
 #header-nav {
