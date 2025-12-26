@@ -281,7 +281,7 @@
 
     img {
         width: 18px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -366,6 +366,7 @@
     background-color: #000;
     color: #fff;
     /* padding: 10px; */
+    font-size: 16px !important;
    
     .group-card {
         display: grid;
@@ -374,29 +375,34 @@
         max-width : var(--max-screen-header-lg);
         margin : 0 auto !important;
         border-bottom: 1px solid #fff;
+        font-size: 16px !important;
+        /* width: 80%; */
     }
 
     .group-card-content {
-        padding: 25px 0px;
+         padding: 25px 0px;
          max-width : var(--max-screen-header-lg);
          margin : 0 auto !important;
+         font-size: 14px !important;
+         
     }
 
     .footer-card {
         margin-top: 50px;
         margin-bottom: 50px;
-        width: 85%;
+        width: 75%;
+        font-size: 14px !important;
         /* overflow: hidden; */
 
         .footer-content {
             margin-top : 10px;
             line-height: 1.8;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         ul {
-            margin-left : 20px;
-            margin-top: 20px;
+            /* margin-left : 20px;
+            margin-top: 20px; */
 
             li {
                 list-style: square;
@@ -408,12 +414,14 @@
     .tags-title {
         color: white;
         margin-bottom: 20px;
+        font-size: 16px !important;
     }
 
     .tags-list {
         display: flex;       
         flex-wrap: wrap;    
-        gap: 10px;          
+        gap: 10px;        
+        font-size: 12px !important;  
     }
 
     .tag-item {
@@ -422,9 +430,10 @@
         border: 1px solid white;
         color: white;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: bold;
         transition: all 0.3s ease;
+        /* font-size: 16px !important; */
     }
 
     .tag-item:hover {
