@@ -17,22 +17,24 @@
 <body>
     <!-- navigation -->
      <section id = "nav-bar">
-        <ul id = "icon-navbar"style="display: flex;">
-            <li id = "search-navbar"><span class="material-symbols-outlined">search</span></li>
-            <li id = "close-navbar"><span class="material-symbols-outlined">menu</span></li>
-            
-        </ul>
-        <ul id ="hide-nav" class = "layout-left navbar-item" >
-            <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
-            <li class = "navbar-item-hide"><a href="laptop.html">Laptop</a></li>
-            <li class = "navbar-item-hide"><a href="phone.html">Phones</a></li>
-            <li class = "navbar-item-hide"><a href="gadget.html">Gadgets</a></li>
-            <li class = "navbar-item-hide"><a href="contact-us.html">Contact Us</a></li>
-            <li class = "navbar-item-hide"><a href="#">Download</a></li>
-        </ul>
+        <div class="container">
+            <ul id ="hide-nav" class = "navbar-item" >
+                <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
+                <li class = "navbar-item-hide"><a href="laptop.html">Laptop</a></li>
+                <li class = "navbar-item-hide"><a href="phone.html">Phones</a></li>
+                <li class = "navbar-item-hide"><a href="gadget.html">Gadgets</a></li>
+                <li class = "navbar-item-hide"><a href="contact-us.html">Contact Us</a></li>
+                <li class = "navbar-item-hide"><a href="#">Download</a></li>
+            </ul>
+            <ul id = "icon-navbar"style="display: flex;">
+                <li id = "search-navbar"><span class="material-symbols-outlined">search</span></li>
+                <li id = "close-navbar"><span class="material-symbols-outlined">menu</span></li>
+                
+            </ul>
+        </div>
      </section>  
      <section id="visible-nav">
-        <ul id = "navbar-items" class = "layout-left navbar-item" >
+        <ul id = "navbar-items" class = "navbar-item" >
             <li class = "navbar-item"><a href="index.html">Home</a></li>
             <li class = "navbar-item"><a href="laptop.html">Laptop</a></li>
             <li class = "navbar-item"><a href="phone.html">Phones</a></li>
@@ -43,25 +45,28 @@
      </section>
      
      <!-- header -->
-      <section id = "header ">
+      <section id = "header">
         <!-- top header -->
-        <div id="top-header">
-            <ul id = "left-header">
-                <li>Support</li>
-                <li>Documentation</li>
-                <li>Blog</li>
-            </ul>
-            <ul id = "right-header">
-                <li>
-                    <span style = "font-size: 20px" class="material-symbols-outlined">call</span>
-                    <span>(123)456-7890</span>
-                </li>
-                <li>
-                    <span style = "font-size: 20px" class="material-symbols-outlined">mail</span>
-                    <span>example@domain.com</span>
-                </li>
-            </ul>
-        </div>
+         <div class="container">
+            <div id="top-header">
+                <ul id = "left-header">
+                    <li>Support</li>
+                    <li>Documentation</li>
+                    <li>Blog</li>
+                </ul>
+                <ul id = "right-header">
+                    <li>
+                        <span style = "font-size: 20px" class="material-symbols-outlined">call</span>
+                        <span>(123)456-7890</span>
+                    </li>
+                    <li>
+                        <span style = "font-size: 20px" class="material-symbols-outlined">mail</span>
+                        <span>example@domain.com</span>
+                    </li>
+                </ul>
+            </div>
+         </div>
+        
         <!-- bottom header -->
          <div id="bottom-header">
             <ul id = "left-header">
@@ -98,9 +103,11 @@
 
       <!-- masthead-->
        <div id="slider-wrapper">
-            <button class = "nav-btn prev" id = "prevBtn"><img src="/font-size/arrow_back.svg" alt=""></button>
+            <button class = "nav-btn prev" id = "prevBtn"><img src="/front-practice/font-size/arrow_back.svg" alt=""></button>
             <div class="slider-container" id="slider">
+
                 <div class="slider-item">
+                    <!-- <img src="/" alt=""> -->
                     <img src="/front-practice/images/anh1.jpg" alt="Laptop">
                     <div class="text-overlay">
                         <h3 class="slide-title">Is MacBook Pro best laptop yet?</h3>
@@ -161,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <button class = "nav-btn next" id = "nextBtn"><img src="/font-size/arrow_forward.svg" alt=""></button>
+            <button class = "nav-btn next" id = "nextBtn"><img src="/front-practice/font-size/arrow_forward.svg" alt=""></button>
        </div>
 
      <!-- main -->
@@ -456,6 +463,26 @@
             hidNav.setAttribute('style', 'display : none !important;');
             visNav.setAttribute('style', 'display : none !important;');
         }
+
+        // thiết lập trước khi 
+        document.addEventListener("DOMContentLoaded", function() {
+            const slider = document.querySelector('.slider-container');
+            
+            // 1. Khai báo thông số cứng (hoặc lấy dynamic nếu muốn)
+            const cardWidth = 420; 
+            const gap = 30;
+
+            const targetIndex = 2; 
+
+            let scrollPosition = targetIndex * (cardWidth + gap) - 140;
+
+            slider.style.scrollBehavior = 'auto';
+            slider.scrollLeft = scrollPosition;
+
+            setTimeout(() => {
+                slider.style.scrollBehavior = 'smooth';
+            }, 50);
+        });
          
     </script>
 </body>

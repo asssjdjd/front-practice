@@ -6,3 +6,10 @@
 .layout-right {
     margin-right: 150px !important;
 }
+
+.container {
+    margin-left: 10vw !important;
+    margin-right: 10vw !important;
+    overflow: hidden;
+    width: 100%;
+}

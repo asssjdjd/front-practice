@@ -17,21 +17,24 @@
 <body>
      <!-- navigation -->
      <section id = "nav-bar">
-        <ul id = "icon-navbar"style="display: flex;">
-            <li id = "search-navbar"><span class="material-symbols-outlined">search</span></li>
-            <li id = "close-navbar"><span class="material-symbols-outlined">menu</span></li>
-        </ul>
-        <ul id ="hide-nav" class = "layout-left navbar-item" >
-            <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
-            <li class = "navbar-item-hide"><a href="laptop.html">Laptop</a></li>
-            <li class = "navbar-item-hide"><a href="phone.html">Phones</a></li>
-            <li class = "navbar-item-hide"><a href="gadget.html">Gadgets</a></li>
-            <li class = "navbar-item-hide"><a href="contact-us.html">Contact Us</a></li>
-            <li class = "navbar-item-hide"><a href="#">Download</a></li>
-        </ul>
+        <div class="container">
+            <ul id ="hide-nav" class = "navbar-item" >
+                <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
+                <li class = "navbar-item-hide"><a href="laptop.html">Laptop</a></li>
+                <li class = "navbar-item-hide"><a href="phone.html">Phones</a></li>
+                <li class = "navbar-item-hide"><a href="gadget.html">Gadgets</a></li>
+                <li class = "navbar-item-hide"><a href="contact-us.html">Contact Us</a></li>
+                <li class = "navbar-item-hide"><a href="#">Download</a></li>
+            </ul>
+            <ul id = "icon-navbar"style="display: flex;">
+                <li id = "search-navbar"><span class="material-symbols-outlined">search</span></li>
+                <li id = "close-navbar"><span class="material-symbols-outlined">menu</span></li>
+                
+            </ul>
+        </div>
      </section>  
      <section id="visible-nav">
-        <ul id = "navbar-items" class = "layout-left navbar-item" >
+        <ul id = "navbar-items" class = "navbar-item" >
             <li class = "navbar-item"><a href="index.html">Home</a></li>
             <li class = "navbar-item"><a href="laptop.html">Laptop</a></li>
             <li class = "navbar-item"><a href="phone.html">Phones</a></li>
@@ -40,27 +43,30 @@
             <li class = "navbar-item"><a href="#">Download</a></li>
         </ul>
      </section>
-
+     
      <!-- header -->
-      <section id = "header ">
+      <section id = "header">
         <!-- top header -->
-        <div id="top-header">
-            <ul id = "left-header">
-                <li>Support</li>
-                <li>Documentation</li>
-                <li>Blog</li>
-            </ul>
-            <ul id = "right-header">
-                <li>
-                    <span class="material-symbols-outlined">call</span>
-                    <span>(123)456-7890</span>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">mail</span>
-                    <span>example@domain.com</span>
-                </li>
-            </ul>
-        </div>
+         <div class="container">
+            <div id="top-header">
+                <ul id = "left-header">
+                    <li>Support</li>
+                    <li>Documentation</li>
+                    <li>Blog</li>
+                </ul>
+                <ul id = "right-header">
+                    <li>
+                        <span style = "font-size: 20px" class="material-symbols-outlined">call</span>
+                        <span>(123)456-7890</span>
+                    </li>
+                    <li>
+                        <span style = "font-size: 20px" class="material-symbols-outlined">mail</span>
+                        <span>example@domain.com</span>
+                    </li>
+                </ul>
+            </div>
+         </div>
+        
         <!-- bottom header -->
          <div id="bottom-header">
             <ul id = "left-header">
@@ -74,19 +80,25 @@
                     <li class = "navbar-item"><a href="gadget.html">Gadgets</a></li>
                     <li class = "navbar-item"><a href="contact-us.html">Contact Us</a></li>
                     <li class = "navbar-item"><a href="#">Download</a></li>
-                <!-- </div> -->
+                    <div style="display: flex; align-items: center; justify-self: center; gap:8px;">
+                        <li><img src="/front-practice/font-size/home.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/notify.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/mail.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/group_search.svg" alt=""></li>
+                    </div>
+                    
+                </div>
             </ul>
             <div id = "header-nav-icon">
                 <ul >
-                    <li><span  class="material-symbols-outlined">search</span></li>
+                    <li><span class="material-symbols-outlined">search</span></li>
                     <li><span class="material-symbols-outlined">menu</span></li>
                 </ul>
             </div>
         </div>
         
-        <!-- header cho trang phone -->
-
-        <div id = "phone-header">
+        <!-- header cho các trang khác viết tại đây -->
+         <div id = "phone-header">
             <div style = "margin-left: 10vw; margin-top : 20px; margin-bottom: 20px; display: flex; gap : 5px; align-items: center;">
                 <span>Home</span> <span style = "font-size: 16px;" class = "material-symbols-outlined">arrow_forward</span> <span>PHONE</span>
             </div>

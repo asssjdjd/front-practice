@@ -12,7 +12,10 @@
     --space-3xl: 64px;
     --space-header-top: 15px;
     --space-header-bottom: 20px;
-    --space-card-main: 10px;
+    --space-card-main: 20px;
+    --max-screen-lg : 1200px;
+    --max-screen-header-lg : 1160px;
+    
 
     /* màu sắc */
     --bg--top-header--color: #000;
