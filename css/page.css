@@ -85,8 +85,12 @@
     }
 
     .read-more:hover {
-        color: var(--text-header-hover);
         transform: translateX(15px);
+        
+        .read {
+            color: var(--text-header-hover); 
+        }
+        
     }
 
     .introduce-card {
