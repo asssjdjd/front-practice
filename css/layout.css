@@ -146,7 +146,7 @@
 
     #icon-navbar {
         position: fixed;
-        top : 30;
+        top : 15px;
         right: 0;
         margin-right: 75px !important;
         align-items: center !important;
@@ -176,6 +176,8 @@
     #nav-bar .navbar-item:hover {
         background-color: #ccd2d9;
     }
+
+   
 }
 
 /* responsible navbar for phones */
@@ -323,6 +325,16 @@
 }
 
 @media screen and (max-width : 1024px) {
+
+    #top-header{
+        max-width: var(--medium-screen) !important;
+        margin: 0 auto;
+    }
+
+    #bottom-header {
+        max-width: var(--medium-screen) !important;
+        margin: 0 auto;
+    }
     
     #header-nav{
         display: none;
@@ -345,6 +357,16 @@
 }
 
 @media screen and (max-width : 678px) {
+
+    #top-header{
+        max-width: var(--small-screen) !important;
+        margin: 0 auto;
+    }
+
+    #bottom-header {
+        max-width: var(--small-screen) !important;
+        margin: 0 auto;
+    }
    #top-header {
         flex-direction: column;
         gap : 8px;
