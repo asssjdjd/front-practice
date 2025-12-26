@@ -81,10 +81,10 @@
                     <li class = "navbar-item"><a href="contact-us.html">Contact Us</a></li>
                     <li class = "navbar-item"><a href="#">Download</a></li>
                     <div style="display: flex; align-items: center; justify-self: center; gap:8px;">
-                        <li><img src="/front-practice/font-size/home.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/notify.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/mail.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/group_search.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/face.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/linkin.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/twitter.png" alt=""></li>
+                        <li><img src="/front-practice/font-size/search.svg" alt=""></li>
                     </div>
                     
                 </div>
@@ -197,9 +197,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_2 -->
              <div class="main-card">
@@ -222,10 +222,9 @@
                     eleifend semper neque, posuere volutpat est pulvinar ac. Vivamus
                     suscipit vitae augue eu feugiat. […]
                 </div>
-
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+                <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_3 -->
              <div class="main-card">
@@ -249,9 +248,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
 
             <!--  group card 2-->
@@ -277,9 +276,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+                <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_2 -->
              <div class="main-card">
@@ -303,9 +302,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_3 -->
              <div class="main-card">
@@ -329,9 +328,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+                <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
 
             <!-- group card 3 -->
@@ -357,9 +356,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_2 -->
              <div class="main-card">
@@ -383,9 +382,9 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
             <!-- card_3 -->
              <div class="main-card">
@@ -409,11 +408,16 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="#" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>    
             </div>
         </div>
+
+         <button id="backToTop" class="back-to-top-btn">
+            <span class="text" style="display: flex; align-items: center; justify-items: center; gap : 10px"> 
+                <span>Back To Top</span> <img src="/front-practice/font-size/arrow_forward_black.svg" alt=""></span>
+        </button>
      </section>
 
      <!-- Footer -->
@@ -440,7 +444,7 @@
             
             <div class="footer-card">
                 <h3 class="tags-title">TAGS</h3>
-                <div class="tags-list">
+                <div class="tags-list">     
                     <a href="#" class="tag-item">DJI</a>
                     <a href="#" class="tag-item">GADGET</a>
                     <a href="#" class="tag-item">GAME</a>
@@ -452,9 +456,22 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <div class="group-card-content content">
+                <span style="color:rgb(189, 189, 189);">Copyright © 2025</span> 
+                Cenote Technology Blog
+                <span style="color:rgb(189, 189, 189);">. All rights reserved. Theme: </span>
+                Cenote 
+                <span style="color:rgb(189, 189, 189);">by ThemeGrill. Powered by WordPress.</span>
+            </div>
+        </div>
       </section>
+
+</button>
     <script src="./js/main.js"></script>
     <script>
+        // ẩn navbar
         const viewportWidthWithScroll = window.innerWidth;
         const hidNav = document.getElementById("hide-nav");
         console.log(hidNav);
@@ -483,7 +500,27 @@
                 slider.style.scrollBehavior = 'smooth';
             }, 50);
         });
-         
+
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const visibleBtnHeight = 700;
+            
+
+            if(window.scrollY > visibleBtnHeight) {
+                document.getElementById('backToTop').setAttribute('style','display: flex;');
+             }else {
+                document.getElementById('backToTop').setAttribute('style','display : none;');
+             }
+            console.log(window.scrollY)
+        });
+
     </script>
 </body>
 </html>

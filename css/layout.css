@@ -36,6 +36,12 @@
         list-style-type: none;
         padding-bottom: var(--space-nor);
     }
+
+    li:hover {
+        a {
+            color: var(--text-header-hover) !important;
+        }
+    }
 }
 
 #navbar-items {
@@ -268,7 +274,9 @@
     }
 
     li:hover {
-        color: var(--text-header-hover);
+        a {
+            color: var(--text-header-hover) !important;
+        }
     }
 }
 
@@ -294,6 +302,10 @@
     div{
         margin-left: -12px;
         margin-bottom: 4px;
+    }
+
+    li:hover {
+        color: var(--text-header-hover);
     }
 
 }
@@ -356,7 +368,13 @@
         overflow: hidden;
         max-width : var(--max-screen-header-lg);
         margin : 0 auto !important;
-        
+        border-bottom: 1px solid #fff;
+    }
+
+    .group-card-content {
+        padding: 25px 0px;
+         max-width : var(--max-screen-header-lg);
+         margin : 0 auto !important;
     }
 
     .footer-card {
@@ -440,3 +458,4 @@
         }
     }
 }
+

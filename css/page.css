@@ -58,8 +58,26 @@
     }
 
     .read-more {
-        display: inline-block;
+        display:flex;
         transition: transform 0.5s ease;
+        position: relative;
+        gap : 5px;
+        padding-left : 40px;
+        text-decoration: none; 
+    }
+
+    .read-more .read::before {
+        content: "";
+        position: absolute;
+        left : 0;
+        display: block;
+        top: calc(50% - 1px);
+        width: 30px;
+        height: 1px;
+        background-color: #212529;
+        -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        
     }
 
     .read-more:hover {
@@ -513,11 +531,10 @@
 
 /* --- 7. RESPONSIVE (Làm cho web chạy tốt trên mọi màn hình) --- */
 
-/* Màn hình Laptop nhỏ & Tablet ngang ( < 1250px ) */
-/* Lúc này nút bấm sẽ bị đè lên nội dung hoặc mất lề */
+
 @media screen and (max-width: 1250px) {
     .slider-center-zone {
-        padding: 0 40px; /* Thêm padding để chừa chỗ cho nút */
+        padding: 0 40px;
     }
     .prev { left: 0; }
     .next { right: 0; }
@@ -725,3 +742,40 @@
     }
 
 }
+
+
+.back-to-top-btn {
+        position: fixed;
+        /* Đặt right âm để khi xoay nó không bị lòi ra quá nhiều */
+        /* Mẹo: Thay vì right: 0, ta dùng kỹ thuật căn tọa độ khác */
+        right: -40px; /* Thụt vào bên trong lề phải một chút */
+        bottom: 150px;
+        z-index: 1000;
+
+        /* Xoay và định vị */
+        transform: rotate(-90deg);
+
+        /* Style cho giống ảnh */
+        background: transparent; /* Bỏ màu nền đỏ đi */
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Quan trọng: Sắp xếp lại thứ tự trong HTML để khi xoay mũi tên lên trên */
+      /* CSS cho chữ */
+      .back-to-top-btn .text {
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333; /* Màu đen xám */
+        letter-spacing: 1px;
+      }
+
+      /* CSS cho icon mũi tên */
+      .back-to-top-btn .icon {
+        font-size: 20px;
+        color: #333;
+      }
