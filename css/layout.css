@@ -26,14 +26,13 @@
 
 #hide-nav {
     display: flex;
-    /* display: none; */
     align-items: center;
     margin : 0 10px;
-    /* justify-content: space-between; */
     gap : 20px;
-    /* font-size: var(--top_header-frontsize) !important; */
+    /* padding-top: 4px; */
     li {
         list-style-type: none;
+        padding-top: var(--space-nor);
         padding-bottom: var(--space-nor);
     }
 
@@ -205,6 +204,7 @@
          overflow: hidden;
          margin: 0 !important;
     }
+    /* height: ; */
 }
 
 #top-header{
@@ -219,12 +219,23 @@
     margin: 0 auto !important;
     max-width: var(--max-screen-header-lg) !important;
     
-    padding-top : var(--space-sm);
-    padding-bottom: var(--space-sm);
+    padding-top : 10px;
+    padding-bottom: 10px;
     
 
     li {
         list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    li:hover {
+        a {
+            color: var(--text-header-hover);
+        }
     }
 }
 
@@ -245,6 +256,12 @@
     li {
         list-style-type: none;
         padding-bottom: var(--space-nor);
+    }
+
+    li:hover {
+        a {
+            color: var(--text-header-hover)
+        }
     }
 }
 
@@ -276,8 +293,9 @@
     }
 
     li:hover {
-        a {
+        span {
             color: var(--text-header-hover) !important;
+            cursor: pointer;
         }
     }
 
@@ -324,6 +342,20 @@
     display: none;
 }
 
+@media screen and (max-width : 1200px) 
+{
+    #top-header{
+        max-width: 960px !important;
+        margin: 0 auto;
+    }
+
+    #bottom-header {
+        max-width: 960px !important;
+        margin: 0 auto;
+    }
+    
+}
+
 @media screen and (max-width : 1024px) {
 
     #top-header{
@@ -356,11 +388,26 @@
     }
 }
 
+
+
+@media  screen and (max-width : 850px) {
+    #top-header{
+        max-width: 650px !important;
+        margin: 0 auto;
+    }
+
+    #bottom-header {
+        max-width: 780px !important;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width : 678px) {
 
     #top-header{
-        max-width: var(--small-screen) !important;
-        margin: 0 auto;
+        /* max-width: var(--small-screen) !important;
+        margin: 0 auto; */
+        display: none;
     }
 
     #bottom-header {
@@ -406,8 +453,18 @@
          max-width : var(--max-screen-header-lg);
          margin : 0 auto !important;
          font-size: 14px !important;
+
+         a {
+            color: #fff;
+         }
+
+         a:hover {
+            color: #18588f ;
+         }
          
     }
+
+    
 
     .footer-card {
         margin-top: 50px;
@@ -427,6 +484,17 @@
             li {
                 list-style: square;
                 margin-top : 12px;
+                
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+
+            li:hover {
+                a {
+                    color: var(--text-header-hover);
+                }
             }
         }
     }

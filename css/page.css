@@ -5,6 +5,59 @@
     overflow: hidden;
     /* background-color: #f7f9fa; */
     background-color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+        .slide-meta {
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .slide-meta .separator {
+            width: 30px;
+            height: 1px;
+            background-color: #000;
+            opacity: 0.7;
+        }
+
+    
+            .category_2 {
+                display: inline;
+                a {
+                    color: var(--text-header-hover);
+                }
+            }
+
+            .date {
+                a {
+                    color: var(--text-header-hover);
+                }
+            }
+
+            .category_2:hover{
+                a {
+                    color: #000 !important;
+                }
+            }
+            /* .slide-title:hover{
+                a {
+                    color: var(--text-header-hover) !important;
+                }
+            } */
+            .date:hover{
+                a{
+                     color: #000 !important;
+                }
+            }
+    
     
     .group-card {
         /* width: 100%; */
@@ -30,31 +83,44 @@
         padding-right: var(--space-card-main);
     }
     
+
+    .infor-card h2 {
+        a {
+            color: #000;
+        }
+    }
+
     .infor-card {
-        padding-top: var(--space-nor);
+        /* padding-top: var(--space-nor); */
         /* margin-top: 34px; */
 
         h2 {
             font-size: 21px;
             font-weight: 700;
+            /* overflow: hidden; */ 
+            /* box-sizing: border-box; */
 
             /* color: #18588f !important; */
+
+            a:hover {
+                 color: #18588f !important;
+            }
         }
 
-        h2:hover {
-            color: var(--text-header-hover) !important;
-        }
 
         div {
-            color: #18588f !important;
+            /* color: #18588f !important; */
             margin-top: 20px !important;
             margin-bottom: 20px !important;
             font-size: 12px !important;
         }
 
-        div:hover{
-            color: #333 !important;
+        h2:hover {
+            a{
+                color: #18588f !important;
+            }
         }
+
     }
 
     .read-more {
@@ -291,6 +357,35 @@
                 line-height: 29.4px;
                 font-family: Catamaran !important;
                 /* text-transform: capitalize; */
+            }
+
+            .category_1{
+                display: inline;
+            }
+            .category_2 {
+                display: inline;
+            }
+
+            .category_1:hover{
+                a {
+                    color: var(--text-header-hover) !important;
+                }
+            }
+
+            .category_2:hover{
+                a {
+                    color: var(--text-header-hover) !important;
+                }
+            }
+            .slide-title:hover{
+                a {
+                    color: var(--text-header-hover) !important;
+                }
+            }
+            .date:hover{
+                a{
+                     color: var(--text-header-hover) !important;
+                }
             }
 
             .slide-meta {
@@ -751,12 +846,13 @@
 
 }
 
+#backToTop {
+    display: none;
+}
 
 .back-to-top-btn {
         position: fixed;
-        /* Đặt right âm để khi xoay nó không bị lòi ra quá nhiều */
-        /* Mẹo: Thay vì right: 0, ta dùng kỹ thuật căn tọa độ khác */
-        right: -40px; /* Thụt vào bên trong lề phải một chút */
+        right: 0px; 
         bottom: 150px;
         z-index: 1000;
 
@@ -770,13 +866,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
+
+        animation: slideUpFade 2s ease-out forwards;
       }
 
       /* Quan trọng: Sắp xếp lại thứ tự trong HTML để khi xoay mũi tên lên trên */
       /* CSS cho chữ */
       .back-to-top-btn .text {
         font-family: "Arial", sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         color: #333; /* Màu đen xám */
         letter-spacing: 1px;
@@ -787,3 +885,14 @@
         font-size: 20px;
         color: #333;
       }
+
+      @keyframes slideUpFade {
+        0% {
+            opacity: 0;
+            margin-bottom: -50px; /* Bắt đầu thấp hơn vị trí gốc 50px */
+        }
+        100% {
+            opacity: 1;
+            margin-bottom: 0; /* Kết thúc tại vị trí bottom: 150px */
+        }
+        }

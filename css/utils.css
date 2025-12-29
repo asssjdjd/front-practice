@@ -13,3 +13,16 @@
     overflow: hidden;
     width: 100%;
 }
+
+.active {
+    border-bottom: 2px solid !important;
+}
+
+.effectFadeIn {
+    transition: opacity 1.5s ease-in-out !important;
+}
+
+.slideEffect {
+    text-decoration: none;
+    color: #fff;
+}
