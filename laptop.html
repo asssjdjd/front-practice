@@ -19,7 +19,7 @@
      <section id = "nav-bar">
         <div class="container">
             <ul id ="hide-nav" class = "navbar-item" >
-                <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
+                <li class = "navbar-item-hide active"><a href="index.html">Home</a></li>
                 <li class = "navbar-item-hide"><a href="laptop.html">Laptop</a></li>
                 <li class = "navbar-item-hide"><a href="phone.html">Phones</a></li>
                 <li class = "navbar-item-hide"><a href="gadget.html">Gadgets</a></li>
@@ -35,7 +35,7 @@
      </section>  
      <section id="visible-nav">
         <ul id = "navbar-items" class = "navbar-item" >
-            <li class = "navbar-item"><a href="index.html">Home</a></li>
+            <li class = "navbar-item active"><a href="index.html">Home</a></li>
             <li class = "navbar-item"><a href="laptop.html">Laptop</a></li>
             <li class = "navbar-item"><a href="phone.html">Phones</a></li>
             <li class = "navbar-item"><a href="gadget.html">Gadgets</a></li>
@@ -50,9 +50,9 @@
          <div class="container">
             <div id="top-header">
                 <ul id = "left-header">
-                    <li>Support</li>
-                    <li>Documentation</li>
-                    <li>Blog</li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Blog</a></li>
                 </ul>
                 <ul id = "right-header">
                     <li>
@@ -70,21 +70,21 @@
         <!-- bottom header -->
          <div id="bottom-header">
             <ul id = "left-header">
-                <img src="/front-practice/images/logo.png" alt="" >
+                <a href="index.html"><img src="/front-practice/images/logo.png" alt="" ></a>
             </ul>
             <ul id = "right-header">
                 <div id = "header-nav">
-                    <li class = "navbar-item"><a href="index.html">Home</a></li>
-                    <li class = "navbar-item"><a href="laptop.html">Laptop</a></li>
+                    <li class = "navbar-item active effectFadeIn"><a href="index.html">Home</a></li>
+                    <li class = "navbar-item effectFadeIn"><a href="laptop.html">Laptop</a></li>
                     <li class = "navbar-item"><a href="phone.html">Phones</a></li>
                     <li class = "navbar-item"><a href="gadget.html">Gadgets</a></li>
                     <li class = "navbar-item"><a href="contact-us.html">Contact Us</a></li>
                     <li class = "navbar-item"><a href="#">Download</a></li>
-                    <div style="display: flex; align-items: center; justify-self: center; gap:8px;">
-                        <li><img src="/front-practice/font-size/home.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/notify.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/mail.svg" alt=""></li>
-                        <li><img src="/front-practice/font-size/group_search.svg" alt=""></li>
+                    <div style="display: flex; align-items: center; justify-self: center; gap:8px;" class = "social-icons">
+                        <li><img src="/front-practice/font-size/face.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/linkin.svg" alt=""></li>
+                        <li><img src="/front-practice/font-size/twitter.png" alt=""></li>
+                        <li><img src="/front-practice/font-size/search.svg" alt=""></li>
                     </div>
                     
                 </div>
@@ -98,6 +98,7 @@
         </div>
         
         <!-- header cho các trang khác viết tại đây -->
+        <!-- header cho các trang khác viết tại đây -->
          <div id = "laptop-header">
             <div style = "margin-left: 10vw; margin-top : 20px; margin-bottom: 20px; display: flex; gap : 5px; align-items: center;">
                 <span>Home</span> <span style = "font-size: 16px;" class = "material-symbols-outlined">arrow_forward</span> <span>LAPTOP</span>
@@ -107,7 +108,6 @@
                 Category : LAPTOPS
             </div>
         </div>
-
       </section>
      <!-- main -->
      <section id = "main">
@@ -143,40 +143,55 @@
      <!-- Footer -->
       <section id = "footer">
         <div class="group-card">
-            <div class="footer-card">
-                <img src="/front-practice/images/logo-white.png" alt="">
-                <div class = "footer-content">
-                    Cenote is Free Clean and Minimal WordPress Blog Theme. 
-                    It is suitable for any types of blog.
-                     You can use it on Personal, Fashion, Travel, Cryptocurrency  or any blog
+            <div class = "left-footer">
+                <div class="footer-card foot_1">
+                    <a href="index.html"><img src="/front-practice/images/logo-white.png" alt=""></a>
+                    <div class = "footer-content" style="font-size: 16px;">
+                        Cenote is Free Clean and Minimal WordPress Blog Theme. 
+                        It is suitable for any types of blog.
+                        You can use it on Personal, Fashion, Travel, Cryptocurrency  or any blog
+                    </div>
+                </div>
+                <div class="footer-card foot_2" style="font-size: 14px;">
+                    <h3 style="font-size: 14px;">CATEGORIES</h3>
+                    <ul> 
+                        <li><a href="laptop.html">LAPTOP</a></li>
+                        <li><a href="phone.html">PHONES</a></li>
+                        <li><a href="gadget.html">GADGETS</a></li>
+                        <li><a href="contact-us.html">CONTACT US</a></li>
+                        <li><a href="#">FEATURES</a></li>
+                    </ul>
+            </div>
+
+            </div>
+            <div class="right-footer">
+                <div class="footer-card foot_3">
+                <h3 class="tags-title" style="font-size: 14px !important;">TAGS</h3>
+                <div class="tags-list" style="font-size: 10px !important;">     
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">DJI</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">GADGET</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">GAME</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">MACBOOK</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">PHONE</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">PLAY STATION</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">SMART WATCH</a>
+                    <a href="#" class="tag-item" style="font-size: 10px !important;">TECH</a>
                 </div>
             </div>
-            <div class="footer-card">
-                <h3>CATEGORIES</h3>
-                <ul> 
-                    <li>LAPTOP</li>
-                    <li>PHONES</li>
-                    <li>GADGETS</li>
-                    <li>CONTACT US</li>
-                    <li>FEATURES</li>
-                </ul>
             </div>
-            
-            <div class="footer-card">
-                <h3 class="tags-title">TAGS</h3>
-                <div class="tags-list">
-                    <a href="#" class="tag-item">DJI</a>
-                    <a href="#" class="tag-item">GADGET</a>
-                    <a href="#" class="tag-item">GAME</a>
-                    <a href="#" class="tag-item">MACBOOK</a>
-                    <a href="#" class="tag-item">PHONE</a>
-                    <a href="#" class="tag-item">PLAY STATION</a>
-                    <a href="#" class="tag-item">SMART WATCH</a>
-                    <a href="#" class="tag-item">TECH</a>
-                </div>
+        </div>
+
+        <div>
+            <div class="group-card-content content" style="font-size: 14px;">
+                <span style="color:rgb(189, 189, 189);">Copyright © 2025</span> 
+                <a href="#" style="text-decoration: none;">Cenote Technology Blog</a>
+                <span style="color:rgb(189, 189, 189);">. All rights reserved. Theme: </span>
+                <a href="#" style="text-decoration: none;">Cenote </a>
+                <span style="color:rgb(189, 189, 189);">by ThemeGrill. Powered by WordPress.</span>
             </div>
         </div>
       </section>
+
       <script src="./js/main.js"></script>
       <script>
         const viewportWidthWithScroll = window.innerWidth;
