@@ -19,7 +19,8 @@
 }
 
 .effectFadeIn {
-    transition: opacity 1.5s ease-in-out !important;
+    transition: all 0.35s ease-in-out !important;
+    /* transition: opacity 1.5s ease-in-out !important; */
 }
 
 .slideEffect {

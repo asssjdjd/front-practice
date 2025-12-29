@@ -33,18 +33,21 @@
                 display: inline;
                 a {
                     color: var(--text-header-hover);
+                    /* transition: all 0.35s ease-in-out; */
                 }
             }
 
             .date {
                 a {
                     color: var(--text-header-hover);
+                    /* transition: all 0.35s ease-in-out; */
                 }
             }
 
             .category_2:hover{
                 a {
                     color: #000 !important;
+                    transition: all 0.35s ease-in-out;
                 }
             }
             /* .slide-title:hover{
@@ -55,6 +58,7 @@
             .date:hover{
                 a{
                      color: #000 !important;
+                     transition: all 0.35s ease-in-out;
                 }
             }
     
@@ -104,6 +108,7 @@
 
             a:hover {
                  color: #18588f !important;
+                 transition: all 0.35s ease-in-out;
             }
         }
 
@@ -118,6 +123,7 @@
         h2:hover {
             a{
                 color: #18588f !important;
+                transition: all 0.35s ease-in-out;
             }
         }
 
@@ -155,6 +161,7 @@
         
         .read {
             color: var(--text-header-hover) !important; 
+            transition: all 0.35s ease-in-out;
         }
         
     }
@@ -442,22 +449,26 @@
             .category_1:hover{
                 a {
                     color: var(--text-header-hover) !important;
+                    transition: all 0.35s ease-in-out;
                 }
             }
 
             .category_2:hover{
                 a {
                     color: var(--text-header-hover) !important;
+                    transition: all 0.35s ease-in-out;
                 }
             }
             .slide-title:hover{
                 a {
                     color: var(--text-header-hover) !important;
+                    transition: all 0.35s ease-in-out;
                 }
             }
             .date:hover{
                 a{
                      color: var(--text-header-hover) !important;
+                     transition: all 0.35s ease-in-out;
                 }
             }
 

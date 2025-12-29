@@ -244,7 +244,7 @@
     justify-content: space-between;
     flex-direction: row;
 
-    background-color: #f7f9fa;
+    background-color: #fff;
     color: #000;
 
     margin: 0 auto !important;
@@ -260,7 +260,7 @@
 
     li:hover {
         a {
-            color: var(--text-header-hover)
+            color: var(--text-header-hover);
         }
     }
 }
@@ -302,6 +302,23 @@
     img {
         width: 18px;
         font-size: 16px;
+    }
+
+    .social-icons img {
+        width: 20px; 
+        height: 20px;
+        display: block;
+        cursor: pointer;
+        
+        /* Hiệu ứng chuyển mượt mà trong 0.3s */
+        transition: all 0.3s ease; 
+        
+    
+    }
+
+    .social-icons li:hover img {
+        /* Bộ lọc này biến màu Đen (#000) thành Xanh (#18588f) */
+        filter: invert(26%) sepia(61%) saturate(1682%) hue-rotate(190deg) brightness(96%) contrast(96%);
     }
 }
 
@@ -436,16 +453,50 @@
     color: #fff;
     /* padding: 10px; */
     font-size: 16px !important;
+    margin-top: 60px;
    
     .group-card {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+        display: flex;
+        /* grid-template-columns: repeat(2,1fr); */
         overflow: hidden;
+        justify-content: left;
+        gap :0px;
         max-width : var(--max-screen-header-lg);
         margin : 0 auto !important;
         border-bottom: 1px solid #fff;
         /* font-size: 16px !important; */
         /* width: 80%; */
+    }
+
+    .left-footer {
+        display: flex;
+        justify-content: space-around;
+        /* width: 400px; */
+        gap: 50px;
+        box-sizing: border-box;
+        overflow:  hidden;
+
+        .foot_1  {
+            width: 40%;
+        }
+    }
+
+    .foot_2 {
+        width: 50%;
+        li {
+            margin-left: 18px;
+        }
+        h3 {
+            margin-bottom: 20px !important;
+        }
+    }
+
+    .foot_3 {
+        width: 45%;
+    }
+
+    .right-footer {
+        width: 100%;
     }
 
     .group-card-content {
@@ -469,7 +520,6 @@
     .footer-card {
         margin-top: 50px;
         margin-bottom: 50px;
-        width: 75%;
 
         .footer-content {
             margin-top : 10px;
@@ -533,31 +583,31 @@
 
     @media screen and (max-width : 1024px) {
         .group-card {
-            grid-template-columns: repeat(2,1fr);
-            max-width: 90vw;
-            /* margin: 0 auto; */
-             gap: 0px;
-            margin-left: 100px;
+           flex-direction: column;
+           max-width: 780px;
         }
     }
     /* for tablets smaill */
     @media screen and (max-width: 900px) and (min-width: 679px) {
-        .group-card {
-            grid-template-columns: repeat(2, 1fr); 
-            max-width: 95vw;
-            margin-left: auto;
+        .left-footer {
+            flex-direction: column;
+        }
+
+        .group-card{
+            max-width: 560px;
         }
     }
 
     /* for phones */
 
     @media screen and (max-width : 678px) {
-        .group-card {
-            grid-template-columns: repeat(1,1fr);
-            max-width: 90vw;
-            margin: 0 auto;
-            align-items: center;
+        .left-footer {
+            flex-direction: column;
         }
+        .group-card{
+            max-width: 400px;
+        }
+        
     }
 }
 
