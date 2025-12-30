@@ -851,7 +851,7 @@
     textarea {
         width: 100%;
         padding: 6px;
-        border: 1px solid rgb(54, 59, 64);
+        border: 1px solid rgb(142, 152, 162);
         box-sizing: border-box; 
         font-size: 16px;
         color: rgb(54, 59, 64);
@@ -896,7 +896,7 @@
         align-items: center;
         
         input {
-            padding: 10px 40px 10px 15px
+            padding: 10px 40px 10px 15px;
         }
 
         .search-icon {
