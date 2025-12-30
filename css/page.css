@@ -229,53 +229,6 @@
         transform: translateY(0);
     }
 
-   
-
-    /* responsive */
-
-    /* for tablets big*/
-    @media screen and (max-width : 1024px) {
-        .group-card {
-            grid-template-columns: repeat(2,1fr);
-            max-width: 90vw;
-            /* margin: 0 auto; */
-             gap: 0px;
-            margin-left: 100px;
-        }
-    }
-    /* for tablets smaill */
-    @media screen and (max-width: 900px) and (min-width: 679px) {
-        .group-card {
-            grid-template-columns: repeat(2, 1fr); 
-            max-width: 95vw;
-            margin-left: auto;
-        }
-        .img-card img {
-            width: 100% !important;
-            height: auto !important;
-        }
-    }
-
-    /* for phones */
-
-    @media screen and (max-width : 678px) {
-        .group-card {
-            grid-template-columns: repeat(1,1fr);
-            max-width: 90vw;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .main-card {
-            width: 100%;   
-        }
-
-        .img-card img {
-            width : 380px !important;
-            height : 180px !important;
-        }
-
-    }
 }
 
 /* Pagination */
@@ -335,21 +288,6 @@
     transform: translateX(5px);
 }
 
-/* Responsive pagination */
-@media screen and (max-width: 678px) {
-    .pagination {
-        gap: 15px;
-    }
-    
-    .pagination a {
-        font-size: 14px;
-    }
-    
-    .pagination .page-arrow img {
-        width: 20px;
-        height: 20px;
-    }
-}
 
 /* SLIDER */
 #slider-wrapper {
@@ -548,30 +486,6 @@
         right: 60%; 
     }
 
-    @media screen and (max-width : 1024px) {
-        
-    }
-
-
-    @media screen and (min-width : 1600px) {
-        &:hover .prev {
-            left: 55%; 
-        }
-
-        &:hover .next {
-            right: 55%; 
-        }
-    }
-
-    @media screen and (min-width : 2000px) {
-        &:hover .prev {
-            left: 52%; 
-        }
-
-        &:hover .next {
-            right: 52%; 
-        }
-    }
 }
 
 /* --- 1. Wrapper bao ngoài cùng (Full width) --- */
@@ -712,43 +626,6 @@
 .prev { left: -20px; }
 .next { right: -20px; }
 
-
-/* --- 7. RESPONSIVE (Làm cho web chạy tốt trên mọi màn hình) --- */
-
-
-@media screen and (max-width: 1250px) {
-    .slider-center-zone {
-        padding: 0 40px;
-    }
-    .prev { left: 0; }
-    .next { right: 0; }
-}
-
-/* Màn hình Tablet dọc ( < 992px ) -> Hiển thị 2 cột */
-@media screen and (max-width: 992px) {
-    .slider-item {
-        /* (100% - 1 gap 30px) / 2 cột */
-        flex: 0 0 calc((100% - 30px) / 2); 
-    }
-}
-
-/* Màn hình Mobile ( < 600px ) -> Hiển thị 1 cột */
-@media screen and (max-width: 600px) {
-    .slider-container {
-        gap: 15px;
-    }
-    
-    .slider-item {
-        flex: 0 0 100%; /* 100% chiều rộng */
-    }
-    
-    /* Trên mobile có thể ẩn nút hoặc làm nút nhỏ hơn */
-    .nav-btn {
-        width: 30px; height: 30px;
-    }
-    
-    .slide-title { font-size: 18px; }
-}
 
 
 /* phone page */
@@ -1002,7 +879,7 @@
                 color: #000; 
 
                 a {
-                    display: inline-block; /* QUAN TRỌNG: Phải là inline-block thì transform mới chạy */
+                    display: inline-block; 
                     text-decoration: none;
                     color: #000;
                     transition: all 0.3s ease; 
@@ -1018,78 +895,7 @@
     }
 }
 
-/* responsive */
 
-@media screen and (max-width : 1024px) {
-    #contact-us-main {
-        flex-direction: column;
-        max-width: 100vw;
-        margin-left: 40px !important;
-        margin-right: 40px !important;
-    }
-
-    .contact-us-card-left {
-        width: 100% !important;
-    }
-
-    .contact-us-card-right {
-        width: 100% !important;
-    }
-
-    .search {
-        gap : 100px !important;
-    }
-}
-
-@media screen and (max-width : 678px) {
-    .search {
-        gap : 10px !important;
-    }
-
-}
-
-/* responsive for anthoer page*/
-
-@media screen and (max-width : 1200px) 
-{
-    #phone-header .content {
-        max-width: var(--large-screen);
-    }
-
-    #phone-content {
-        max-width: var(--large-screen);
-    }
-}
-
-@media screen and (min-width: 850px) and (max-width: 1024px) {
-    #phone-header .content {
-        max-width: var(--medium-screen);
-    }
-
-    #phone-content {
-        max-width: var(--medium-screen);
-    }
-}
-
-@media screen and (max-width : 800px) and (min-width : 700px) {
-    #phone-header .content {
-        max-width: var(--mid-small-screen);
-    }
-
-    #phone-content {
-        max-width: var(--mid-small-screen);
-    }
-}
-
-@media screen and (max-width : 650px) {
-    #phone-header .content {
-        max-width: var(--small-screen) ;
-    }
-
-    #phone-content {
-        max-width: var(--small-screen);
-    }
-}
 
 
 #backToTop {
