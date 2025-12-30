@@ -9,6 +9,26 @@ const hideNav = document.getElementById("hide-nav");
 const visibleNav = document.getElementById("visible-nav");
 const hideNavItems = document.querySelectorAll("#hide-nav .navbar-item-hide")
 
+
+document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const visibleBtnHeight = 350;
+            
+
+            if(window.scrollY > visibleBtnHeight) {
+                document.getElementById('backToTop').setAttribute('style','display: flex; transition : opacity 3s ease-in-out');
+             }else {
+                document.getElementById('backToTop').setAttribute('style','display : none;');
+             }
+            console.log(window.scrollY)
+        });
+
 window.addEventListener('DOMContentLoaded', () => {
     const viewportWidthWithScroll = window.innerWidth;
     if(viewportWidthWithScroll <= 1024) {
@@ -22,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // navBar.setAttribute('style','display : none;')
 window.addEventListener('scroll', () => {
     const navBar = document.getElementById("nav-bar");
-    const headerHeight = document.querySelector('#header')?.offsetHeight || 150 ;
+    const headerHeight = 150 ;
     // console.log(headerHeight);
     
     const viewportWidthWithScroll = window.innerWidth;

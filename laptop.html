@@ -99,32 +99,46 @@
                 </ul>
             </div>
         </div>
-        
-        <!-- header cho các trang khác viết tại đây -->
-        <!-- header cho các trang khác viết tại đây -->
-         <div id = "laptop-header">
-            <div style = "margin-left: 10vw; margin-top : 20px; margin-bottom: 20px; display: flex; gap : 5px; align-items: center;">
-                <span>Home</span> <span style = "font-size: 16px;" class = "material-symbols-outlined">arrow_forward</span> <span>LAPTOP</span>
+      </section>
+      <!-- thêm -->
+       <!-- header cho các trang khác viết tại đây -->
+         <div id = "phone-header">
+            <div class="content">
+                <div style = "padding-top : 20px; padding-bottom: 20px; display: flex; gap : 8px; align-items: center;">
+                    <a href="index.html">Home</a> <span style = "font-size: 16px; color: rgb(134, 142, 150);" class = "material-symbols-outlined">arrow_forward</span>
+                    <span>LAPTOP</span>
+                </div>
             </div>
-
-            <div id = "laptop-content">
-                Category : LAPTOPS
+            <div class="wrapper">
+                    <div id = "phone-content">
+                        Category : LAPTOP
+                    </div>
             </div>
         </div>
-      </section>
      <!-- main -->
      <section id = "main">
         <div class="group-card">
 
-            <!-- group card 1 -->
             <!-- card_1 -->
             <div class="main-card">
                 <div class = "img-card">
-                    <img src="/front-practice/images/anh7.jpg" alt="...." width="360px" height="180px">
+                   <a href="contact-us.html">
+                        <img src="/front-practice/images/anh7.jpg" alt="...." width="360px" height="180px">
+                        <div class="overlay">
+                            <span class="overlay-text">I</span>
+                        </div>
+                   </a>
                 </div>
                 <div class = "infor-card">
-                    <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
-                    <div style = "color: #1994d1; margin-top: 20px; margin-bottom: 20px;" >GADGETS ---- August 1, 2018</div>
+                    <h2 style = "font-size: 20px; margin-top: 30px;"><a style="text-decoration: none;" href="contact-us.html">DJI Phantom 3 vs Phantom 4</a></h2>
+                    <div class="slide-meta">
+                            <span class="category">
+                                <div class="category_2"><a href="laptop.html" class="slideEffect">FEATURED</a></div>
+                                <span style="padding: 0 6px;">,</span>
+                                <div class="category_2"><a href="laptop.html" class="slideEffect">LAPTOP</a></div>
+                            </span>
+                            <span class="separator"></span> <span class="date"><a href="#" class = "slideEffect">August 1, 2018</a></span>
+                    </div>
                 </div>
 
                 <div class="introduce-card" style="font-size: 18px;line-height: 1.8">
@@ -136,14 +150,19 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="contact-us.html" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
         </div>
+
+        <button id="backToTop" class="back-to-top-btn">
+            <span class="text" style="display: flex; align-items: center; justify-items: center; gap : 10px"> 
+                <span>Back To Top</span> <img src="/front-practice/font-size/arrow_forward_black.svg" alt=""></span>
+        </button>
      </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
       <section id = "footer">
         <div class="group-card">
             <div class = "left-footer">

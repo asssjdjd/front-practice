@@ -10,13 +10,21 @@
     --space-xl: 32px;
     --space-2xl: 48px;
     --space-3xl: 64px;
+
     --space-header-top: 15px;
     --space-header-bottom: 20px;
     --space-card-main: 20px;
+
     --max-screen-lg : 1200px;
     --max-screen-header-lg : 1160px;
-    --medium-screen : 880px;
-    --small-screen : 380px;
+    --large-screen : 960px;
+    --medium-screen : 780px;
+    --mid-small-screen : 650px;
+    --small-screen : 400px;
+
+    /* 1024 -> 1200  large-screen*/ 
+    /* 850 -> 1026 medium-screen */
+    /* < 678 - 380 small-scrren  */
     
 
     /* màu sắc */

@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- navigation -->
-    <section id = "nav-bar">
+     <section id = "nav-bar">
         <div class="container">
             <ul id ="hide-nav" class = "navbar-item" >
                 <li class = "navbar-item-hide"><a href="index.html">Home</a></li>
@@ -46,10 +46,10 @@
             <li class = "navbar-item"><a href="contact-us.html">Contact Us</a></li>
             <li class = "navbar-item"><a href="#">Download</a></li>
         </ul>
-    </section>
+     </section>
      
      <!-- header -->
-    <section id = "header">
+      <section id = "header">
         <!-- top header -->
          <div class="container">
             <div id="top-header">
@@ -100,31 +100,43 @@
                 </ul>
             </div>
         </div>
-          <!-- header cho các trang khác viết tại đây -->
+      </section>
+      <!-- thêm -->
+       <!-- header cho các trang khác viết tại đây -->
          <div id = "phone-header">
-            <div style = "margin-left: 10vw; margin-top : 20px; margin-bottom: 20px; display: flex; gap : 5px; align-items: center;">
-                <span>Home</span> <span style = "font-size: 16px;" class = "material-symbols-outlined">arrow_forward</span> <span>PHONE</span>
+            <div class="content">
+                <div style = "padding-top : 20px; padding-bottom: 20px; display: flex; gap : 8px; align-items: center;">
+                    <a href="index.html">Home</a> <span style = "font-size: 16px; color: rgb(134, 142, 150);" class = "material-symbols-outlined">arrow_forward</span> <span>PHONE</span>
+                </div>
             </div>
-
-            <div id = "phone-content">
-                Category : PHONES
+            <div class="wrapper">
+                    <div id = "phone-content">
+                        Category : PHONES
+                    </div>
             </div>
+            
         </div>
-
-    </section>
+    
      <!-- main -->
      <section id = "main">
         <div class="group-card">
 
-            <!-- group card 1 -->
-            <!-- card_1 -->
-            <div class="main-card">
+             <!-- card_1 -->
+             <div class="main-card">
                 <div class = "img-card">
-                    <img src="/front-practice/images/anh6.jpg" alt="...." width="360px" height="180px">
+                    <a href="contact-us.html">
+                        <img src="/front-practice/images/anh6.jpg" alt="...." width="360px" height="180px">
+                        <div class="overlay">
+                            <span class="overlay-text">T</span>
+                        </div>
+                    </a>
                 </div>
                 <div class = "infor-card">
-                    <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
-                    <div style = "color: #1994d1; margin-top: 20px; margin-bottom: 20px;" >GADGETS ---- August 1, 2018</div>
+                    <h2 style = "font-size: 20px; margin-top: 30px;"><a style="text-decoration: none;" href="contact-us.html">DJI Phantom 3 vs Phantom 4</a></h2>
+                    <div class="slide-meta">
+                            <span class="category"><div class="category_2"><a href="laptop.html" class="slideEffect">LAPTOP</a></div></span>
+                            <span class="separator"></span> <span class="date"><a href="#" class = "slideEffect">August 1, 2018</a></span>
+                    </div>
                 </div>
 
                 <div class="introduce-card" style="font-size: 18px;line-height: 1.8">
@@ -136,19 +148,42 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="contact-us.html" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
 
-            <!-- card_2 -->
-            <div class="main-card">
+             <!-- card_2 -->
+             <div class="main-card">
                 <div class = "img-card">
-                    <img src="/front-practice/images/anh9.jpg" alt="...." width="360px" height="180px">
+                    <a href="contact-us.html">
+                        <img src="/front-practice/images/anh9.jpg" alt="...." width="360px" height="180px">
+                        <div class="overlay">
+                            <span class="overlay-text">W</span>
+                        </div>
+                    </a>
                 </div>
                 <div class = "infor-card">
-                    <h2 style = "font-size: 20px; margin-top: 30px;">DJI Phantom 3 vs Phantom 4</h2>
-                    <div style = "color: #1994d1; margin-top: 20px; margin-bottom: 20px;" >GADGETS ---- August 1, 2018</div>
+                    <h2 style = "font-size: 20px; margin-top: 30px;"><a style="text-decoration: none;" href="contact-us.html">DJI Phantom 3 vs Phantom 4</a></h2>
+                    <div class="slide-meta">
+                            <span class="category">
+                                <div class="category_2">
+                                    <a href="laptop.html" class="slideEffect">LAPTOP</a>
+                                </div>
+                                <span style="margin: 0 4px;"> , </span>
+                                <div class="category_2">
+                                    <a href="contact-us.html" class="slideEffect">FEATURED</a>
+                                </div>
+                                <span style="margin: 0 4px;"> , </span>
+                                <div class="category_2">
+                                    <a href="phone.html" class="slideEffect">PHONES</a>
+                                </div>
+                            </span>
+                            <span class="separator"></span> 
+                            <span class="date">
+                                <a href="#" class = "slideEffect">August 1, 2018</a>
+                            </span>
+                    </div>
                 </div>
 
                 <div class="introduce-card" style="font-size: 18px;line-height: 1.8">
@@ -160,11 +195,15 @@
                     suscipit vitae augue eu feugiat. […]
                 </div>
 
-                <div class="read-more">
-                    ----  READ MORE
-                </div>
+               <a href="contact-us.html" class="read-more">
+                    <div class = "read">READ MORE</div>
+                </a>
             </div>
         </div>
+        <button id="backToTop" class="back-to-top-btn">
+            <span class="text" style="display: flex; align-items: center; justify-items: center; gap : 10px"> 
+                <span>Back To Top</span> <img src="/front-practice/font-size/arrow_forward_black.svg" alt=""></span>
+        </button>
      </section>
 
       <!-- Footer -->
@@ -220,8 +259,10 @@
       </section>
 
      
-      <script src="./js/main.js"></script>
+      <script src="/js/main.js"></script>
       <script>
+        
+        // ẩn navbar
         const viewportWidthWithScroll = window.innerWidth;
         const hidNav = document.getElementById("hide-nav");
         console.log(hidNav);
