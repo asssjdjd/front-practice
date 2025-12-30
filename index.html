@@ -88,7 +88,7 @@
                         <li><img src="/front-practice/font-size/face.svg" alt=""></li>
                         <li><img src="/front-practice/font-size/linkin.svg" alt=""></li>
                         <li><img src="/front-practice/font-size/twitter.png" alt=""></li>
-                        <li><img src="/front-practice/font-size/search.svg" alt=""></li>
+                        <li id = "search_2"><img src="/front-practice/font-size/search.svg" alt=""></li>
                     </div>
                     
                 </div>
@@ -174,6 +174,21 @@
             </div>
             <button class = "nav-btn next" id = "nextBtn"><img src="/front-practice/font-size/arrow_forward.svg" alt=""></button>
        </div>
+
+       <!-- model-search -->
+       <div id="searchModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="Search ..." id="mainSearchInput">
+                    <div class="underline"></div>
+                </div>
+                
+                <p class="search-hint">Begin typing your search term above and press enter to search. Press ESC to cancel.</p>
+                <button type="submit" class="submit-btn">SEARCH</button>
+            </div>
+        </div>
 
      <!-- main -->
      <section id = "main">
@@ -583,7 +598,7 @@
              }else {
                 document.getElementById('backToTop').setAttribute('style','display : none;');
              }
-            console.log(window.scrollY)
+            // console.log(window.scrollY)
         });
 
     </script>

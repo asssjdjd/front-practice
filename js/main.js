@@ -8,8 +8,26 @@ const navbarHeader = document.querySelectorAll("#header-nav .navbar-item");
 const hideNav = document.getElementById("hide-nav");
 const visibleNav = document.getElementById("visible-nav");
 const hideNavItems = document.querySelectorAll("#hide-nav .navbar-item-hide")
+const closeModal = document.getElementById("searchModal");
+const searchModal = document.getElementById("searchModal");
+const searchBtn1 = document.getElementById("search-navbar");
+const search_2 = document.getElementById("search_2");
 
+// logic đóng searhModal
+closeModal.addEventListener("click", () => {
+    searchModal.setAttribute('style',"display:none;");
+});
 
+// logic mở searchModal
+searchBtn1.addEventListener("click", () => {
+    searchModal.setAttribute('style',"display:block");
+});
+
+search_2.addEventListener("click", () => {
+    searchModal.setAttribute('style',"display:block");
+});
+
+// logic chuyển của nút
 document.getElementById('backToTop').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -26,7 +44,7 @@ document.getElementById('backToTop').addEventListener('click', function() {
              }else {
                 document.getElementById('backToTop').setAttribute('style','display : none;');
              }
-            console.log(window.scrollY)
+            // console.log(window.scrollY)
         });
 
 window.addEventListener('DOMContentLoaded', () => {

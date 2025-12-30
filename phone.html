@@ -89,7 +89,7 @@
                         <li><img src="/front-practice/font-size/face.svg" alt=""></li>
                         <li><img src="/front-practice/font-size/linkin.svg" alt=""></li>
                         <li><img src="/front-practice/font-size/twitter.png" alt=""></li>
-                        <li><img src="/front-practice/font-size/search.svg" alt=""></li>
+                        <li id = "search-2"><img src="/front-practice/font-size/search.svg" alt=""></li>
                     </div>
                     
                 </div>
@@ -116,6 +116,20 @@
                     </div>
             </div>
             
+        </div>
+
+        <div id="searchModal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="Search ..." id="mainSearchInput">
+                    <div class="underline"></div>
+                </div>
+                
+                <p class="search-hint">Begin typing your search term above and press enter to search. Press ESC to cancel.</p>
+                <button type="submit" class="submit-btn">SEARCH</button>
+            </div>
         </div>
     
      <!-- main -->
@@ -263,7 +277,7 @@
       <script>
         const viewportWidthWithScroll = window.innerWidth;
         const hidNav = document.getElementById("hide-nav");
-        console.log(hidNav);
+        // console.log(hidNav);
         const visNav = document.getElementById('visible-nav')
         if(viewportWidthWithScroll <= 1025) {
             hidNav.setAttribute('style', 'display : none !important;');
