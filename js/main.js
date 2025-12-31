@@ -8,14 +8,14 @@ const navbarHeader = document.querySelectorAll("#header-nav .navbar-item");
 const hideNav = document.getElementById("hide-nav");
 const visibleNav = document.getElementById("visible-nav");
 const hideNavItems = document.querySelectorAll("#hide-nav .navbar-item-hide")
-const closeModal = document.querySelector("#ssearchModal .close-modal");
+const closeModal = document.querySelector("#searchModal .close-modal");
 const searchModal = document.getElementById("searchModal");
 const searchBtn1 = document.getElementById("search-navbar");
 const search_2 = document.getElementById("search_2");
 const search_3 = document.querySelectorAll("#header-nav-icon li")[0];
 
 
-
+console.log(closeModal)
 // logic đóng searhModal
 closeModal.addEventListener("click", () => {
     searchModal.setAttribute('style',"display:none;");
