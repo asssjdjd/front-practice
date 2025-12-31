@@ -12,7 +12,9 @@ const closeModal = document.getElementById("searchModal");
 const searchModal = document.getElementById("searchModal");
 const searchBtn1 = document.getElementById("search-navbar");
 const search_2 = document.getElementById("search_2");
-const searchNav = document.getElementById("search-navbar");
+const search_3 = document.querySelectorAll("#header-nav-icon li")[0];
+
+
 
 // logic đóng searhModal
 closeModal.addEventListener("click", () => {
@@ -28,9 +30,9 @@ search_2.addEventListener("click", () => {
     searchModal.setAttribute('style',"display:block");
 });
 
-searchNav.addEventListener("click", () => {
+search_3.addEventListener("click", () => {
     searchModal.setAttribute('style',"display:block");
-})
+});
 // logic chuyển của nút
 document.getElementById('backToTop').addEventListener('click', function() {
             window.scrollTo({
